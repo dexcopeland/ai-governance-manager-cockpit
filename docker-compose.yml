@@ -1,0 +1,14 @@
+services:
+  cockpit:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      SESSION_SECRET: ${SESSION_SECRET:-dev-only-session-secret-change-me-32chars!!}
+      DATABASE_PATH: /data/cockpit.db
+    volumes:
+      - cockpit-data:/data
+    restart: unless-stopped
+
+volumes:
+  cockpit-data:

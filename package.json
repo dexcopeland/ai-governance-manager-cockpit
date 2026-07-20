@@ -1,0 +1,40 @@
+{
+  "name": "ai-governance-cockpit",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Open-source operational cockpit for AI Governance Managers",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "db:migrate": "tsx src/lib/db/migrate.ts",
+    "db:seed": "tsx src/lib/db/seed.ts",
+    "db:reseed": "tsx src/lib/db/seed.ts --force"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "date-fns": "^4.4.0",
+    "drizzle-orm": "^0.45.2",
+    "iron-session": "^8.0.4",
+    "next": "^16.2.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.10",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.1",
+    "typescript": "^5"
+  }
+}
